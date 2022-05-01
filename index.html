@@ -8,6 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
   <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="./style.css">
 
 
@@ -15,8 +16,59 @@
 
 <body>
 
+  <!-- NAVBAR -->
+  <div id="navBar">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <a class="navbar-brand" href="index.html">GIF Maker</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#chart">Spinning Wheel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#die">Dice Roll</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#coin">Coin Flip</a>
+          </li>
+         
+          
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+  <!-- TEXT -->
+  <div id="text">
+  <p>For this project, I have used three concepts taught in ISTA 301. These three concepts are: Algorithmic Art, Generative Art, and GIF Making. I will take various inputs from the user and, at the end of the page, a GIF will be created based on this. By default, the GIF displays an ellipse rotating on the canvas with a black background. These update as the user gives input. </p>
+<ol>
+  <li>The first step is to spin the wheel. The shape that the wheel lands on will be in the GIF.</li>
+  <li>Throw the three dice. The result of the 3 dice will be used to select the background color for the GIF. The RGB value for the background is calculated using this formula: 
+    <br>
+    let r =(dice1*50);
+    <br>
+    let g =(dice2*50);
+    <br>
+    let b =(dice3*50);
+    <br>
+    background( r,g,b);
+    <br>
+
+  </li>
+  <li>Flip the coin! If it lands on the red side, then the animation in the GIF will be "A rotating shape", otherwise it will be "A shape entering and leaving the screen."</li>
+</ol>
+</div>
+
+
   <!-- //SPINNING WHEEL -->
+
   <div id="chart"></div>
+  
+
   <div id="question">
     <h1></h1>
   </div>
@@ -38,29 +90,19 @@
     face5.src = "d6.gif"
   </script>
 
-  <div class="die">
+  <div id="die">
     <img class="dice" src="d1.gif" name="mydice1">
-
-
-    <form class="dice">
-      <input type="button" value="Throw dice!" onClick="throwdice1('mydice1')">
-    </form>
-
-  </div>
-
-  <div class="die">
+    <button type="button" class="btn btn-outline-secondary" value="Throw dice!" onClick="throwdice1('mydice1')">Throw Dice</button>
+   
     <img class="dice" src="d1.gif" name="mydice2">
-    <form>
-      <input type="button" value="Throw dice!" onClick="throwdice2('mydice2')">
-    </form>
-  </div>
-
-
+   <button type="button" class="btn btn-outline-secondary" value="Throw dice!" onClick="throwdice2('mydice2')">Throw Dice</button>
 
   <img class="dice" src="d1.gif" name="mydice3">
-  <form>
-    <input type="button" value="Throw dice!" onClick="throwdice3('mydice3')">
-  </form>
+  <button type="button" class="btn btn-outline-secondary" value="Throw dice!" onClick="throwdice3('mydice3')">Throw Dice</button>
+
+  
+</div>
+
 
   <!-- Coin -->
   <div id="coin">
@@ -69,18 +111,9 @@
   </div>
   <h1 id="coinResult">Click on coin to flip</h1>
 
-  <!-- Submit -->
-
-  <form>
-    <a href="gif.html"><input type="button" value="Create GIF!" onClick="createGIF()"></a>
-
-  </form>
 
 
-
-
-
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script  src="sketch.js"></script>
 
 

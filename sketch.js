@@ -146,7 +146,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
 
         function throwdice1(name){
 
-        var randomdice=Math.round(Math.random()*1)
+        var randomdice=Math.round(Math.random()*5)
         mydice1=randomdice;
         console.log(mydice1)
         document.images[name].src=eval("face"+randomdice+".src")
@@ -207,7 +207,11 @@ let counter = 0;
 
   function render(percent) {
     let angle = map(percent, 0, 1, 0, TWO_PI);
-    background(mydice1*100+mydice2*10+mydice3);
+    let r =(mydice1*50);
+    let g =(mydice2*50);
+    let b =(mydice3*50);
+    background( r,g,b);
+    
     translate(width / 2, height / 2);
     rotate(angle);
     rectMode(CENTER);
@@ -226,7 +230,10 @@ let counter = 0;
   }
 
   function ellipsedraw(percent){
-    background(mydice1*100+mydice2*10+mydice3);
+    let r =(mydice1*50);
+    let g =(mydice2*50);
+    let b =(mydice3*50);
+    background( r,g,b);
     if(shape ==='ELLIPSE'){
       ellipse(percent*width, height/2, 50,40)
 

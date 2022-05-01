@@ -1,77 +1,91 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
+  background-color: #f8ad9d;
+  text-align: center;
 }
+
+.navbar {
+  
+  background-color: #f08080;
+  padding: 1rem;
+}
+
 canvas {
   display: block;
 }
-text{
-        font-family:Helvetica, Arial, sans-serif;
-        font-size:11px;
-        pointer-events:none;
-    }
-    #chart{
-        /* position:absolute; */
-        width:500px;
-        height:500px;
-        top:0;
-        left:0;
-    }
-    #question{
-        position: absolute;
-        width:400px;
-        height:500px;
-        top:0;
-        left:520px;
-    }
-    #question h1{
-        font-size: 50px;
-        font-weight: bold;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        position: absolute;
-        padding: 0;
-        margin: 0;
-        top:50%;
-        -webkit-transform:translate(0,-50%);
-                transform:translate(0,-50%);
-    }
-.die{
 
-  display: inline;
+text {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  pointer-events: none;
 }
 
-form{
-  display: inline;
+#chart {
+  margin: 5% 35% 15% 35%;
+  width: 30%;
+  height: 30%;
+
+
 }
 
-body {
-  padding-top: 50px;
-  background: #F7F7F7;
-  -webkit-perspective: 800px;
+#question h1 {
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
 }
-h1{
+
+#text {
+  text-align: left;
+  padding: 7% 10%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #846267;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+
+.dice{
+  margin: 5%;
+}
+
+#die{
+  margin: 15%;
+}
+
+
+
+h1 {
   text-align: center;
 }
+
 #coin {
   position: relative;
-  margin: 0 auto;
+  margin: 15% auto 4%;
   width: 100px;
   height: 100px;
   cursor: pointer;
 }
+
 #coin div {
   width: 100%;
   height: 100%;
   -webkit-border-radius: 50%;
-     -moz-border-radius: 50%;
-          border-radius: 50%;
-  -webkit-box-shadow: inset 0 0 45px rgba(255,255,255,.3), 0 12px 20px -10px rgba(0,0,0,.4);
-     -moz-box-shadow: inset 0 0 45px rgba(255,255,255,.3), 0 12px 20px -10px rgba(0,0,0,.4);
-          box-shadow: inset 0 0 45px rgba(255,255,255,.3), 0 12px 20px -10px rgba(0,0,0,.4);
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 0 45px rgba(255, 255, 255, .3), 0 12px 20px -10px rgba(0, 0, 0, .4);
+  -moz-box-shadow: inset 0 0 45px rgba(255, 255, 255, .3), 0 12px 20px -10px rgba(0, 0, 0, .4);
+  box-shadow: inset 0 0 45px rgba(255, 255, 255, .3), 0 12px 20px -10px rgba(0, 0, 0, .4);
 }
+
 .side-a {
   background-color: #bb0000;
 }
+
 .side-b {
   background-color: #3e3e3e;
 }
@@ -80,13 +94,16 @@ h1{
   transition: -webkit-transform 1s ease-in;
   -webkit-transform-style: preserve-3d;
 }
+
 #coin div {
   position: absolute;
   -webkit-backface-visibility: hidden;
 }
+
 .side-a {
   z-index: 100;
 }
+
 .side-b {
   -webkit-transform: rotateY(-180deg);
 
@@ -95,21 +112,41 @@ h1{
 #coin.heads {
   -webkit-animation: flipHeads 3s ease-out forwards;
   -moz-animation: flipHeads 3s ease-out forwards;
-    -o-animation: flipHeads 3s ease-out forwards;
-       animation: flipHeads 3s ease-out forwards;
+  -o-animation: flipHeads 3s ease-out forwards;
+  animation: flipHeads 3s ease-out forwards;
 }
+
 #coin.tails {
   -webkit-animation: flipTails 3s ease-out forwards;
   -moz-animation: flipTails 3s ease-out forwards;
-    -o-animation: flipTails 3s ease-out forwards;
-       animation: flipTails 3s ease-out forwards;
+  -o-animation: flipTails 3s ease-out forwards;
+  animation: flipTails 3s ease-out forwards;
 }
 
 @-webkit-keyframes flipHeads {
-  from { -webkit-transform: rotateY(0); -moz-transform: rotateY(0); transform: rotateY(0); }
-  to { -webkit-transform: rotateY(1800deg); -moz-transform: rotateY(1800deg); transform: rotateY(1800deg); }
+  from {
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+
+  to {
+    -webkit-transform: rotateY(1800deg);
+    -moz-transform: rotateY(1800deg);
+    transform: rotateY(1800deg);
+  }
 }
+
 @-webkit-keyframes flipTails {
-  from { -webkit-transform: rotateY(0); -moz-transform: rotateY(0); transform: rotateY(0); }
-  to { -webkit-transform: rotateY(1980deg); -moz-transform: rotateY(1980deg); transform: rotateY(1980deg); }
+  from {
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+
+  to {
+    -webkit-transform: rotateY(1980deg);
+    -moz-transform: rotateY(1980deg);
+    transform: rotateY(1980deg);
+  }
 }
