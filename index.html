@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="./style.css">
+
+
+</head>
+
+<body>
+
+  <!-- //SPINNING WHEEL -->
+  <div id="chart"></div>
+  <div id="question">
+    <h1></h1>
+  </div>
+
+  <!-- DICE -->
+  <script>
+    //preload the six images first
+    var face0 = new Image()
+    face0.src = "d1.gif"
+    var face1 = new Image()
+    face1.src = "d2.gif"
+    var face2 = new Image()
+    face2.src = "d3.gif"
+    var face3 = new Image()
+    face3.src = "d4.gif"
+    var face4 = new Image()
+    face4.src = "d5.gif"
+    var face5 = new Image()
+    face5.src = "d6.gif"
+  </script>
+
+  <div class="die">
+    <img class="dice" src="d1.gif" name="mydice1">
+
+
+    <form class="dice">
+      <input type="button" value="Throw dice!" onClick="throwdice1('mydice1')">
+    </form>
+
+  </div>
+
+  <div class="die">
+    <img class="dice" src="d1.gif" name="mydice2">
+    <form>
+      <input type="button" value="Throw dice!" onClick="throwdice2('mydice2')">
+    </form>
+  </div>
+
+
+
+  <img class="dice" src="d1.gif" name="mydice3">
+  <form>
+    <input type="button" value="Throw dice!" onClick="throwdice3('mydice3')">
+  </form>
+
+  <!-- Coin -->
+  <div id="coin">
+    <div class="side-a"></div>
+    <div class="side-b"></div>
+  </div>
+  <h1 id="coinResult">Click on coin to flip</h1>
+
+  <!-- Submit -->
+
+  <form>
+    <a href="gif.html"><input type="button" value="Create GIF!" onClick="createGIF()"></a>
+
+  </form>
+
+
+
+
+
+
+  <script  src="sketch.js"></script>
+
+
+
+
+</body>
+
+</html>
