@@ -150,3 +150,10 @@ h1 {
     transform: rotateY(1980deg);
   }
 }
+
+#resetButton{
+  margin:5%;
+  width: 15%;
+  
+  
+}

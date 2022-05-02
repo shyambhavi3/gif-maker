@@ -44,7 +44,7 @@
 
   <!-- TEXT -->
   <div id="text">
-  <p>For this project, I have used three concepts taught in ISTA 301. These three concepts are: Algorithmic Art, Generative Art, and GIF Making. I will take various inputs from the user and, at the end of the page, a GIF will be created based on this. By default, the GIF displays an ellipse rotating on the canvas with a black background. These update as the user gives input. </p>
+  <p>For this project, I have used three concepts taught in ISTA 301. These three concepts are: Algorithmic Art, Generative Art, and GIF Making. I will take various inputs from the user and, at the end of the page, a GIF will be created based on this. By default, the GIF displays an ellipse rotating on the canvas with a black background. These update as the user gives input. </p>
 <ol>
   <li>The first step is to spin the wheel. The shape that the wheel lands on will be in the GIF.</li>
   <li>Throw the three dice. The result of the 3 dice will be used to select the background color for the GIF. The RGB value for the background is calculated using this formula: 
@@ -59,8 +59,10 @@
     <br>
 
   </li>
-  <li>Flip the coin! If it lands on the red side, then the animation in the GIF will be "A rotating shape", otherwise it will be "A shape entering and leaving the screen."</li>
+  <li>Flip the coin! If it lands on the red side, then the animation in the GIF will be "A rotating shape", otherwise it will be "A shape entering and leaving the screen."</li>
 </ol>
+
+
 </div>
 
 
@@ -112,13 +114,22 @@
   <h1 id="coinResult">Click on coin to flip</h1>
 
 
+  <!-- reset -->
+  <button id="resetButton" type="button" class="btn btn-outline-secondary"  onClick="location.reload()">Reset</button>
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script  src="sketch.js"></script>
 
 
 
-
+<footer>
+  <h1>Credits:</h1>
+  <p>Spinning Wheel: https://codepen.io/sumeshkp18/pen/VGBPYg</p>
+  <p>Coin Flip: https://codepen.io/le0864/pen/pbmoVQ</p>
+  </footer>
 </body>
+
 
 </html>
